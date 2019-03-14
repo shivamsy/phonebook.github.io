@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
+<title>Phonebook</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,17 +54,6 @@ body {
   font-size: 10px;
 }
 
-/*table{
-    border: 1px solid black;
-    table-layout: fixed;
-    width: 200px;
-}
-
-th, td {
-    border: 1px solid black;
-    width: 100px;
-}*/
-
 </style>
 </head>
 <body >
@@ -78,7 +67,7 @@ th, td {
 </div>
 
 <div id="back" class="back" style="display: none; font-size: 10px;">
-    BACK
+    <p onclick="showContacts()";>BACK</p>
 </div>
 
 <div ng-app="" class="addbutton" id="other", style="display: none; padding: 10px;">
@@ -101,6 +90,14 @@ function view() {
   document.getElementById('other').setAttribute('style', 'display:block');
   document.getElementById('contacts').setAttribute('style', 'display:none');
   document.getElementById('add').setAttribute('style', 'display:none');
+}
+
+
+function showContacts() {
+  document.getElementById('back').setAttribute('style', 'display:none');
+  document.getElementById('other').setAttribute('style', 'display:none');
+  document.getElementById('contacts').setAttribute('style', 'display:block');
+  document.getElementById('add').setAttribute('style', 'display:block');
 }
 
 
